@@ -1,0 +1,3 @@
+
+
+curses library may not work properly on some Windows terminals. It is best to run this code in a Unix-based terminal (Linux or macOS) or use a compatible terminal emulator on Windows.
