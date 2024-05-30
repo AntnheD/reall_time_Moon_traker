@@ -1,6 +1,6 @@
 import curses
 import time
-from .tracker.py import MoonTracker
+from .tracker import MoonTracker
 
 class MoonAnimator:
     def __init__(self, moon_tracker):
