@@ -1,11 +1,6 @@
-mkdir -p moon_tracker/moon_tracker
-touch moon_tracker/moon_tracker/__init__.py
-touch moon_tracker/moon_tracker/tracker.py
-touch moon_tracker/moon_tracker/animator.py
-touch moon_tracker/main.py
-touch moon_tracker/requirements.txt
 ephem
 windows-curses
 timezonefinder
 geopy
 pytz
+colorama

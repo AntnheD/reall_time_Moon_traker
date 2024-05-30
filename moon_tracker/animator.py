@@ -1,3 +1,5 @@
+# File: moon_tracker/animator.py
+
 import curses
 import time
 from .tracker import MoonTracker
@@ -13,14 +15,17 @@ class MoonAnimator:
         while True:
             moon_info = self.moon_tracker.get_moon_info()
             phase = moon_info['phase']
-            phase_char = self.get_phase_char(phase)
+            phase_art = self.get_phase_art(phase)
             
             # Display moon phase and other information
             stdscr.addstr(2, 2, f"Moon Phase (percentage): {phase:.2f}")
             stdscr.addstr(3, 2, f"Moon Altitude (radians): {moon_info['altitude']:.2f}")
             stdscr.addstr(4, 2, f"Moon Azimuth (radians): {moon_info['azimuth']:.2f}")
             stdscr.addstr(5, 2, f"Moon Distance from Earth (AU): {moon_info['earth_distance']:.4f}")
-            stdscr.addstr(7, 2, f"Moon Phase: {phase_char}")
+            
+            # Display moon phase art
+            for i, line in enumerate(phase_art.split('\n')):
+                stdscr.addstr(7 + i, 2, line)
             
             # Refresh screen
             stdscr.refresh()
@@ -29,14 +34,64 @@ class MoonAnimator:
             time.sleep(1)
             stdscr.clear()
 
-    def get_phase_char(self, phase):
+    def get_phase_art(self, phase):
         if phase == 0 or phase == 100:
-            return "●"  # Full Moon
+            return """
+     _..._
+   .:::::::.
+  :::::::::::
+ ::::::::::::: 
+ ::::::::::::: 
+ ::::::::::::: 
+  ::::::::::: 
+   ':::::::' 
+     ''''
+"""
         elif phase < 25:
-            return "◔"  # Waxing Crescent
+            return """
+     _..._
+   .::::: 
+  ::::::  
+ ::::::   
+ ::::::   
+  :::::: 
+   ':::::
+     ''''
+"""
         elif phase < 50:
-            return "◑"  # First Quarter
+            return """
+     _..._
+   .:::::: 
+  :::::::  
+ :::::::   
+ :::::::   
+ :::::::  
+  ::::::: 
+   '::::: 
+     '''  
+"""
         elif phase < 75:
-            return "◕"  # Waxing Gibbous
+            return """
+     _..._
+   .:::::::.
+  :::::::::::
+ ::::::::::::: 
+ ::::::::::::: 
+ ::::::::::'. 
+  ::::::::' 
+   '::::::' 
+     '''' 
+"""
         else:
-            return "○"  # New Moon
+            return """
+     _..._
+   .:::::. 
+  :::::::. 
+ ::::::::. 
+ ::::::::. 
+ ::::::::. 
+  :::::::. 
+   ':::::' 
+     ''''
+"""
+
