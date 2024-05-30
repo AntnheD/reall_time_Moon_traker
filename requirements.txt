@@ -4,3 +4,8 @@ touch moon_tracker/moon_tracker/tracker.py
 touch moon_tracker/moon_tracker/animator.py
 touch moon_tracker/main.py
 touch moon_tracker/requirements.txt
+ephem
+windows-curses
+timezonefinder
+geopy
+pytz
