@@ -1,7 +1,7 @@
 <h2>Description:</h2>
 <p>The Moon Tracker app is a Python-based command-line tool designed to provide real-time information about the moon's phase, altitude, azimuth, and distance from Earth. It utilizes astronomical calculations and the device's location to present accurate data on the current position and status of the moon.
 </p>
-<img src="moon.png">
+<img src="moon.png" width="400px">
 <h2>Requirements:</h2>
 <p>Python Environment: The app requires a Python environment to run, preferably using Python 3.x.</p>
 
