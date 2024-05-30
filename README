@@ -1,3 +1,26 @@
+Description:
+The Moon Tracker app is a Python-based command-line tool designed to provide real-time information about the moon's phase, altitude, azimuth, and distance from Earth. It utilizes astronomical calculations and the device's location to present accurate data on the current position and status of the moon.
 
+Requirements:
+Python Environment: The app requires a Python environment to run, preferably using Python 3.x.
 
-curses library may not work properly on some Windows terminals. It is best to run this code in a Unix-based terminal (Linux or macOS) or use a compatible terminal emulator on Windows.
+Dependencies: The app relies on several third-party libraries, including ephem, geopy, pytz, timezonefinder, and colorama. These dependencies must be installed in the Python environment using pip.
+
+Terminal or Command Prompt: The app is designed to be run from a terminal or command prompt interface, where it can display real-time updates and information about the moon.
+
+Use:
+Installation: Users need to download or clone the Moon Tracker app from a repository or source code distribution. Once downloaded, they must install the required dependencies by running pip install -r requirements.txt in the project directory.
+
+Running the App: To run the app, users navigate to the project directory containing the main.py file and execute python main.py from the terminal or command prompt.
+
+Real-time Updates: The app continuously retrieves data about the moon's position and phase, updating the display every second to provide real-time information.
+
+Display: The app displays various details about the moon, including its current phase (percentage), altitude (radians), azimuth (radians), and distance from Earth (AU). Additionally, it presents an ASCII art representation of the moon's phase, providing a visual depiction of its appearance.
+
+Colorful Output: With the integration of the colorama library, the app enhances the terminal display by adding color to the output, making it more visually appealing and easier to interpret.
+
+Location-based Information: The app automatically detects the user's location based on the device's time zone or GPS coordinates. If the location cannot be determined, it defaults to Addis Ababa, Ethiopia.
+
+Customization: Users can customize the app by modifying the ASCII art representation of the moon or adjusting the display format as needed.
+
+Overall, the Moon Tracker app offers a simple yet informative way to track the moon's movements and learn more about its phases and characteristics in real time. It caters to astronomy enthusiasts, students, and anyone interested in celestial phenomena.
