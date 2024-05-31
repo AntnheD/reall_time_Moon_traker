@@ -3,7 +3,7 @@
 import curses
 import time
 from .tracker import MoonTracker
-
+from colorama import init, Fore, Back, Style
 class MoonAnimator:
     def __init__(self, moon_tracker):
         self.moon_tracker = moon_tracker
